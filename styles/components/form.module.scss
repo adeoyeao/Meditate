@@ -1,0 +1,90 @@
+@import "../settings/colors.scss";
+
+.Form {
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem 1rem;
+      display: grid;
+      grid-gap: 2rem;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(5px);
+      font-size: 20px;
+
+      h1 {
+            text-transform: capitalize;
+      }
+
+      .Form_inputs {
+            display: grid;
+            grid-gap: 0.5rem;
+
+            input {
+                  background: $dark-grey;
+                  color: $black;
+                  border: none;
+                  appearance: none;
+                  outline: none;
+                  border-radius: 0;
+                  padding: 1rem;
+                  &::placeholder {
+                        color: $light-grey
+                  }
+            }
+      }
+
+      .Form_submitButton {
+            background: $middle-blue;
+            color: $white;
+            cursor: pointer;
+            appearance: none;
+            outline: none;
+            padding: 1rem;
+            border: none;
+            text-transform: capitalize;
+
+            &:hover {
+                  background: $white;
+                  color: $middle-blue;
+                  box-shadow: 0 0 7px 4px rgba(255, 255, 255, 0.2)
+            }
+      }
+
+      .Form_oauth {
+            display: grid;
+            grid-gap: 0.5rem;
+            grid-template-columns: 1fr 1fr;
+            color: $light-grey;
+            button:nth-of-type(1) {
+                  background: #3B5998;
+                  cursor: pointer;
+                  &:hover {
+                        color: $white;
+                  }
+            }
+            button:nth-of-type(2) {
+                  background: #DE5246;
+                  cursor: pointer;
+                  &:hover {
+                        color: $white;
+                  }
+            }
+            button {
+                  border: none;
+                  appearance: none;
+                  outline: none;
+                  padding: 1rem;
+                  &:hover {
+                        box-shadow: 0 0 7px 4px rgba(255, 255, 255, 0.2)
+                  }
+            }
+      } 
+
+      p {
+            color: $white;
+            text-align: center;
+            span {
+                  color: $middle-blue;
+                  cursor: pointer;
+            }
+      }    
+}

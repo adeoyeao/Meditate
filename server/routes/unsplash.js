@@ -11,3 +11,5 @@ router.get("/unsplash", async (req, res) => {
 
       console.log(data)
 })
+
+module.exports = router

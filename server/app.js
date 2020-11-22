@@ -21,18 +21,21 @@ nextApp.prepare()
       const app = express()
 
       const allowAccess = (req, res, next) => {
-            if(req.isAuthenticated) {
+            if(req.isAuthenticated()) {
                   res.redirect("/home")
-                  next()
             }
+            next()
       }
 
       const restrictAccess = (req, res, next) => {
-            if(!req.isAuthenticated) {
+            if(!req.isAuthenticated()) {
                   res.redirect("/")
-                  next()
             }
+            next()
       }
+
+      app.use(require("./routes/authentication"))
+      // app.use(require("./routes/unsplash"))
 
       app.use(/^\/$/, allowAccess)
       app.use("/home", restrictAccess) 
